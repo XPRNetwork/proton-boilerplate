@@ -1,7 +1,7 @@
 const assert = require('assert');
 
-const TOKEN_WASM_PATH = `${__dirname}/../../c++_tests/system_wasms/eosio.token.wasm`;
-const TOKEN_ABI_PATH = `${__dirname}/../../c++_tests/system_wasms/eosio.token.abi`;
+const TOKEN_WASM_PATH = `${__dirname}/../system_wasms/eosio.token.wasm`;
+const TOKEN_ABI_PATH = `${__dirname}../system_wasms/eosio.token.abi`;
 
 const ATOM_WASM_PATH = `${__dirname}/../../atom/atom.wasm`;
 const ATOM_ABI_PATH = `${__dirname}/../../atom/atom.abi`;
