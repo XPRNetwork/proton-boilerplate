@@ -1,5 +1,5 @@
-import { ConnectWallet } from '@protonprotocol/proton-web-sdk'
-import { Api, JsonRpc } from '@protonprotocol/protonjs'
+import { ConnectWallet } from '@proton/web-sdk'
+import { Api, JsonRpc } from '@proton/js'
 import { requestAccount, endpoints, appName } from '@/constants'
 
 export const rpc = new JsonRpc(endpoints)
@@ -13,7 +13,7 @@ let wallet = {
 export const login = async ({ restoreSession } = { restoreSession: false }) => {
   const connectedWallet = await ConnectWallet({
     linkOptions: {
-      rpc,
+      endpoints,
       restoreSession
     },
     transportOptions: {
