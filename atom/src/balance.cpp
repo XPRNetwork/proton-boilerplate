@@ -4,6 +4,7 @@ namespace proton {
   void atom::add_balance (const name& account, const extended_asset& delta) {
     auto acc_itr = _accounts.find(account.value);
     auto ext_sym = delta.get_extended_symbol();
+    check(delta.quantity.amount > 0, "balance to add must be positive");
 
     // Account does not exist
     if (acc_itr == _accounts.end())
